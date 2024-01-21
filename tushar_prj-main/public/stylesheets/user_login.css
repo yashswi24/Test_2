@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .group-11385 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .user-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #03013B; /* Match admin-side background color */
+    color: #fff; /* Match admin-side text color */
+  }
+  
+  .rectangle-3 {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .email,
+  .user-id {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff; /* Match label text color to admin-login text color */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .rectangle-6 {
+    background-color: #0500FF;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .rectangle-6:hover {
+    background-color: #0300a0;
+  }
+  

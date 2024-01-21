@@ -1,0 +1,62 @@
+<!-- views/user_dashboard.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head content -->
+    <script>
+        function showPreview(input) {
+            var file = input.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('previewImage').src = e.target.result;
+                    document.getElementById('profileText').style.display = 'none'; // Hide text when image is chosen
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</head>
+<link rel="stylesheet" href="/stylesheets/user_dashboard.css">
+
+<body>
+    <div class="container">
+        <div class="group-48096341">
+            <div class="group-11385">
+                <div class="group-11169">
+                    <div class="rectangle-3">
+                        <a href="/user/view" class="view-button">View</a>
+                        <label for="imageUpload" class="upload-label">
+                            <input type="file" id="imageUpload" name="imageUpload" accept="image/*" required onchange="showPreview(this)">
+                            Choose File
+                        </label>
+                    </div>
+
+                    <!-- Display form to enter full name -->
+                    <div class="name">
+                        <label for="fullName">Name:</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <!-- Display user's profile picture with dimensions -->
+                    <div class="photo">
+                        <img id="previewImage" src="/uploads/<%= user.profile.imageUrl %>" alt="Profile Picture" width="464" height="417">
+                    </div>
+
+                    <!-- Display form to update welcome page -->
+                    <div class="update-button">
+                        <form action="/user/update-welcome" method="post" enctype="multipart/form-data">
+                            <button type="submit">Update Welcome Page</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="rectangle-6"></div>
+            </div>
+
+            <div class="password"></div>
+        </div>
+    </div>
+</body>
+</html>

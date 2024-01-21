@@ -1,0 +1,50 @@
+<!-- views/view.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/view.css">
+    <title>User Details</title>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-button">&lt; Back</a>
+        <h2>User Details</h2>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Full Name</th>
+                    <th>Profile Picture</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (user) { %>
+                    <tr>
+                        <td><%= user._id %></td>
+                        <td><%= user.username %></td>
+                        <td><%= user.profile.fullName %></td>
+                        <td><img src="<%= user.profile.imageUrl %>" alt="Profile Picture" width="50" height="50"></td>
+                        <td>
+                            <!-- Form for delete action -->
+                            <form action="/user/delete" method="post">
+                                <input type="hidden" name="userId" value="<%= user._id %>">
+                                <button type="submit" class="delete-button">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } else { %>
+                    <tr>
+                        <td colspan="5">User not found</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

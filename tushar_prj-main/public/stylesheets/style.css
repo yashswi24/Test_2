@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.admin-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.admin-side {
+  flex: 1;
+  background: #03013B;
+  position: relative;
+  /* Add styles for ellipses, vectors, and other elements */
+}
+
+.admin-login {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-section {
+  text-align: center;
+  padding: 20px;
+}
+/* Example CSS Styling */
+
+.login-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  background-color: #0500FF;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0300a0;
+}
+.logo-container {
+
+  position: absolute;
+  width: 169px;
+  height: 72px;
+  left: 110px;
+  top: 400px;
+  padding: 30px;
+  background-color: white;
+}
+
+.logo {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 59.1184px;
+  line-height: 72px;
+  color: #0500FF;
+}
+
+/* Add additional styles for your admin page */
